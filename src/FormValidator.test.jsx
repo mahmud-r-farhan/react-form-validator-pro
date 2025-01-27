@@ -65,7 +65,7 @@ describe("FormValidator", () => {
     fireEvent.click(screen.getByText("Submit"))
 
     expect(handleSubmit).toHaveBeenCalledWith({
-      name: "Mahmuudur Rahman",
+      name: "Mahmudur Rahman",
       email: "dev@devplus.fun",
     })
   })
