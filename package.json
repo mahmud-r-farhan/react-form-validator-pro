@@ -1,0 +1,55 @@
+{
+  "name": "react-form-validator-pro",
+  "version": "1.0.0",
+  "description": "A React form validation package",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "validation",
+    "form-validator",
+    "react-forms"
+  ],
+  "author": "Mahmudur Rahman",
+  "license": "MIT",
+  "homepage": "https://devplus.fun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmud-r-farhan/react-form-validator-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/conflow/react-form-validator-pro/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^12.0.0",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "jest-environment-jsdom": "^27.0.6",
+    "rollup": "^2.56.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}

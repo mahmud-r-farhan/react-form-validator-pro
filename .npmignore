@@ -1,0 +1,12 @@
+src/
+.babelrc
+jest.config
+rollup.config.js
+setupTests.js
+package-lock.json
+node_modules/
+.vscode/
+.DS_Store
+.git/
+.npmignore
+.gitignore
