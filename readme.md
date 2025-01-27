@@ -42,14 +42,30 @@ const App = () => {
       <h1>React Form Validator Example</h1>
       <FormValidator
         onSubmit={handleSubmit}
-        rules={{
-          username: { required: true },
+        validations={{
+          username: { required: true, requiredMessage: "Username is required" },
           email: { 
             required: true, 
             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             message: 'Invalid email format',
           },
+          phone: {
+            required: true,
+            type: 'phone',
+            typeMessage: 'Invalid phone number format',
+            minLength: 10,
+            minLengthMessage: 'Phone number must be at least 10 characters long',
+          },
+          password: {
+            required: true,
+            type: 'password',
+            typeMessage: 'Password must contain at least one letter, one number, and one special character',
+            minLength: 8,
+            minLengthMessage: 'Password must be at least 8 characters long',
+          },
         }}
+        validateOnChange={true}
+        validateOnBlur={true}
       >
         <div>
           <label>Username:</label>
@@ -59,6 +75,14 @@ const App = () => {
           <label>Email:</label>
           <input name="email" placeholder="Enter your email" />
         </div>
+        <div>
+          <label>Phone:</label>
+          <input name="phone" placeholder="Enter your phone number" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input name="password" type="password" placeholder="Enter your password" />
+        </div>
         <button type="submit">Submit</button>
       </FormValidator>
     </div>
@@ -66,6 +90,7 @@ const App = () => {
 };
 
 export default App;
+
 ```
 
 ---
